@@ -1,14 +1,8 @@
-from flask import Flask
+from PIL import Image
+import matplotlib.pyplot as plt
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello():
-    return "Hello, World!"
-
-@app.route("/about")
-def about():
-    return "About"
-
-if __name__ == '__main__':
-    app.run(port=8000)
+def test(name):
+    img = Image.open(f"memes/{name}.png")
+    plt.imshow(img)
+    plt.axis('off')
+    plt.show()
