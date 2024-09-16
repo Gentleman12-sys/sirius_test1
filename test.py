@@ -9,3 +9,4 @@ def test(name):
     plt.show()
 
 test('i.png')
+test('i2.png')
